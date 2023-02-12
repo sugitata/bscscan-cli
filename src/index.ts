@@ -1,15 +1,12 @@
 #!/usr/bin/env node
 
-const clear = require('clear');
-const figlet = require('figlet');
-const { Command } = require('commander');
-
+import figlet from 'figlet';
+import { Command } from 'commander';
 import chalk from 'chalk';
 import axios from 'axios';
 
 const program = new Command();
 
-clear();
 console.log(
   chalk.red(figlet.textSync('bscscan cli', { horizontalLayout: 'full' }))
 );
