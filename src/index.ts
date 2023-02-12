@@ -109,7 +109,10 @@ async function main() {
     contractAddress: options.contract,
     apiKey: options.key,
   };
-  console.log('Using sample input!');
+
+  if (!hasOptions) {
+    console.log('Using sample input!');
+  }
   console.log('Retrieving asset movements...');
   const movements = await getTokenMovements(hasOptions ? input : sampleInput);
   await displayTokenMovements(movements);
